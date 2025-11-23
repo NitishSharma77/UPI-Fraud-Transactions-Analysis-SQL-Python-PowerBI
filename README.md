@@ -146,7 +146,7 @@ UPI_Transactions_Analysis/
 
 ---
 
-<h2 id="recommend">💡 Recommendations (Updated)</h2>
+<h2 id="recommend">💡 Recommendations </h2>
 <ul>
   <li>Enhance Feature Phone Security (extra OTP + awareness sessions)</li>
   <li>Redesign Risk Scoring using ML + behaviour analytics</li>
