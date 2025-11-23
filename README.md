@@ -124,7 +124,7 @@ UPI_Transactions_Analysis/
 
 ---
 
-<h2 id="insights">🌟 Key Insights (Updated)</h2>
+<h2 id="insights">🌟 Key Insights </h2>
 
 ### 🔍 UPI Fraud Detection Summary
 - Total Fraud Cases: <b>2,000 (2%)</b>  
@@ -136,7 +136,7 @@ UPI_Transactions_Analysis/
 
 ---
 
-<h2 id="impact">📈 Expected Business Impact (Updated)</h2>
+<h2 id="impact">📈 Expected Business Impact </h2>
 
 - 🔒 Reduce fraud from <b>2% → 1.2%</b> (₹33K yearly savings)  
 - 💰 Improve transaction success → failures <b>5.87% → 3.5%</b> (₹1L+ additional successful payments)  
