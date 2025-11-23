@@ -1,6 +1,7 @@
+
 # 💳 UPI Fraud & Transaction Analysis – SQL | Python | Power BI
 
-_An end-to-end data analytics project analyzing UPI transactions, identifying fraud patterns, studying customer & merchant behaviour, and building an executive dashboard._
+_An end-to-end analytics project analyzing UPI transactions, detecting fraud patterns, validating data integrity, performing EDA, statistical testing, and building an executive dashboard._
 
 ---
 
@@ -13,9 +14,10 @@ _An end-to-end data analytics project analyzing UPI transactions, identifying fr
   <li><a href="#data-cleaning">Data Validation & Cleaning</a></li>
   <li><a href="#python-eda">Python EDA & Analysis</a></li>
   <li><a href="#sql-db">SQL Database Design</a></li>
-  <li><a href="#dashboards">Dashboards</a></li>
   <li><a href="#insights">Key Insights</a></li>
+  <li><a href="#impact">Business Impact</a></li>
   <li><a href="#recommend">Recommendations</a></li>
+  <li><a href="#dashboards">Dashboards</a></li>
   <li><a href="#author">Author</a></li>
 </ul>
 
@@ -23,30 +25,31 @@ _An end-to-end data analytics project analyzing UPI transactions, identifying fr
 
 <h2 id="overview">📘 Overview</h2>
 <p>
-This project analyzes UPI transaction behaviour using <b>SQL</b>, <b>Python</b>, and <b>Power BI</b>, focusing on fraud detection, failed transactions, high-risk devices, merchant behaviour, customer analytics, and dashboard reporting.
+This project analyzes UPI transactions (1,00,000 records) to identify fraud patterns, detect risky devices, analyze customer & merchant behaviour, and measure operational performance.
+<br>
+It includes end-to-end workflow: <b>Excel Validation → SQL Database → Python EDA → Statistical Tests → Power BI Dashboard → Final Insights & Recommendations.</b>
 </p>
 
 ---
 
 <h2 id="business-problem">🧩 Business Problem</h2>
 <ul>
-  <li>Fraud risk</li>
-  <li>Transaction failures</li>
-  <li>High-risk devices</li>
-  <li>Merchant disputes</li>
-  <li>Customer churn</li>
-  <li>Compliance & KYC issues</li>
+  <li>Rising fraud attempts across devices & channels</li>
+  <li>Increasing transaction failures</li>
+  <li>Weak fraud alert and risk scoring system</li>
+  <li>Merchant disputes and customer churn</li>
+  <li>Need for a unified dashboard for leadership</li>
 </ul>
 
 ---
 
 <h2 id="tools-tech">🛠 Tools & Technologies</h2>
 <ul>
-  <li>MySQL</li>
-  <li>Python (Pandas, Seaborn, Matplotlib, SciPy)</li>
-  <li>Power BI Desktop</li>
-  <li>Excel</li>
-  <li>Git & GitHub</li>
+  <li><b>MySQL</b> – Database design, constraints, ETL</li>
+  <li><b>Python</b> – Pandas, Matplotlib, Seaborn, SciPy</li>
+  <li><b>Excel</b> – Data validation & quality checks</li>
+  <li><b>Power BI</b> – Interactive dashboard</li>
+  <li><b>Git & GitHub</b> – Version control</li>
 </ul>
 
 ---
@@ -90,25 +93,22 @@ UPI_Transactions_Analysis/
 
 <h2 id="data-cleaning">🧼 Data Validation & Cleaning</h2>
 <ul>
-  <li>Missing values flagged</li>
-  <li>Date formatting corrected</li>
-  <li>Device & merchant codes validated</li>
-  <li>Duplicate transactions removed</li>
-  <li>Fraud flags and KYC issues verified</li>
-  <li>Data Quality Log prepared</li>
+  <li>Foreign key validation across all 7 tables</li>
+  <li>Corrected typos in device type, status, and merchant category</li>
+  <li>Standardized date formats</li>
+  <li>Flagged missing values & created validation_status column</li>
+  <li>Created Data Quality Log</li>
 </ul>
 
 ---
 
 <h2 id="python-eda">🐍 Python EDA & Analysis</h2>
 <ul>
-  <li>Trend analysis</li>
-  <li>Customer segmentation</li>
-  <li>Device fraud ratios</li>
-  <li>Merchant performance</li>
-  <li>Failure-rate analysis</li>
-  <li>Outlier detection</li>
-  <li>Heatmaps</li>
+  <li>Trend analysis (daily, monthly fraud & transaction volume)</li>
+  <li>Device-level fraud ratio</li>
+  <li>Merchant performance segmentation</li>
+  <li>Failure rate root-cause analysis</li>
+  <li>Correlation heatmaps</li>
   <li>Hypothesis testing (ANOVA, t-test, chi-square)</li>
 </ul>
 
@@ -116,13 +116,44 @@ UPI_Transactions_Analysis/
 
 <h2 id="sql-db">🗄 SQL Database Design</h2>
 <ul>
-  <li>customer_master</li>
-  <li>device_info</li>
-  <li>upi_account_details</li>
-  <li>merchant_info</li>
-  <li>upi_transaction_history</li>
-  <li>fraud_alert_history</li>
-  <li>customer_feedback_surveys</li>
+  <li>7 tables with PK–FK constraints</li>
+  <li>Relationship validation (1-to-many, many-to-many)</li>
+  <li>CHECK constraints for fraud_flag, amount, status</li>
+  <li>ER diagram for reference</li>
+</ul>
+
+---
+
+<h2 id="insights">🌟 Key Insights (Updated)</h2>
+
+### 🔍 UPI Fraud Detection Summary
+- Total Fraud Cases: <b>2,000 (2%)</b>  
+- Highest Risk Segment: <b>Feature Phones → 1.5× higher fraud (551 cases)</b>  
+- Failure Rate: <b>5.87% (5,870 failed transactions)</b>  
+- Risk Score: <b>No meaningful correlation → ineffective model</b>  
+- Fraud Alerts: <b>248 unresolved</b>  
+- Fraud Distribution: <b>Evenly spread across regions & channels → platform-wide issue</b>
+
+---
+
+<h2 id="impact">📈 Expected Business Impact (Updated)</h2>
+
+- 🔒 Reduce fraud from <b>2% → 1.2%</b> (₹33K yearly savings)  
+- 💰 Improve transaction success → failures <b>5.87% → 3.5%</b> (₹1L+ additional successful payments)  
+- 🚀 Fraud alert backlog reduced <b>to under 5%</b>  
+- 📊 Better monitoring of risky devices  
+- 😊 Higher customer trust, regulatory compliance, smoother audits  
+
+---
+
+<h2 id="recommend">💡 Recommendations (Updated)</h2>
+<ul>
+  <li>Enhance Feature Phone Security (extra OTP + awareness sessions)</li>
+  <li>Redesign Risk Scoring using ML + behaviour analytics</li>
+  <li>Improve Fraud Alert Workflow & reduce backlog</li>
+  <li>Infra improvements to reduce failed transactions</li>
+  <li>Merchant & customer awareness workshops</li>
+  <li>High-value transaction real-time monitoring</li>
 </ul>
 
 ---
@@ -137,28 +168,6 @@ UPI_Transactions_Analysis/
 
 ---
 
-<h2 id="insights">🌟 Key Insights</h2>
-<ul>
-  <li>Rooted devices show higher fraud attempts</li>
-  <li>Merchant category affects fraud & failures</li>
-  <li>High-risk customers often give negative feedback</li>
-  <li>High-value transactions show more fraud flags</li>
-  <li>Certain regions show higher failure spikes</li>
-</ul>
-
----
-
-<h2 id="recommend">💡 Recommendations</h2>
-<ul>
-  <li>Implement device-risk scoring</li>
-  <li>Improve merchant verification</li>
-  <li>Push awareness alerts</li>
-  <li>Monitor high-value transactions strictly</li>
-  <li>Automate fraud-flag detection</li>
-</ul>
-
----
-
 <h2 id="author">👤 Author</h2>
 <b>Nitish Sharma</b><br>
 📧 Email: <b>nitishsharma.id@gmail.com</b><br>
@@ -166,4 +175,4 @@ UPI_Transactions_Analysis/
 🔗 LinkedIn: https://www.linkedin.com/in/nitish-sharma7/<br>
 
 <hr>
-<p>⭐ Did you like the project? Consider giving the repository a STAR!</p>
+<p>⭐ If you found this project helpful, consider giving the repository a STAR!</p>
