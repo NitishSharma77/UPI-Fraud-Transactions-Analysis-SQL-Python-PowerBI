@@ -27,6 +27,7 @@ _An end-to-end analytics project analyzing UPI transactions, detecting fraud pat
 <p>
 This project analyzes UPI transactions (1,00,000 records) to identify fraud patterns, detect risky devices, analyze customer & merchant behaviour, and measure operational performance.
 <br>
+
 It includes end-to-end workflow: <b>Excel Validation → SQL Database → Python EDA → Statistical Tests → Power BI Dashboard → Final Insights & Recommendations.</b>
 </p>
 
