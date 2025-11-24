@@ -81,13 +81,13 @@ UPI_Transactions_Analysis/
 │   └── Capstone_Project_Report.pdf
 │
 ├── SQL_Database/
-│   ├── upi_project_customer_feedback_surveys.sql
-│   ├── upi_project_customer_master.sql
-│   ├── upi_project_device_info.sql
-│   ├── upi_project_fraud_alert_history.sql
-│   ├── upi_project_merchant_info.sql
-│   ├── upi_project_upi_account_details.sql
-│   └── upi_project_upi_transaction_history.sql
+│   ├── customer_feedback_surveys.sql
+│   ├── customer_master.sql
+│   ├── device_info.sql
+│   ├── fraud_alert_history.sql
+│   ├── merchant_info.sql
+│   ├── upi_account_details.sql
+│   └── upi_transaction_history.sql
 </pre>
 
 ---
